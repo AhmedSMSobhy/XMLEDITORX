@@ -1,0 +1,97 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--
+        Reusable glass pill buttons (radius 10, glass fill, hairline border, hover bump). The Swift
+        original (ChartPopoutWindow.GlassPillButton) draws its own fill/stroke so it
+        fits the dark glass theme rather than looking like a system button.
+
+        "XM.GlassPillButton" , momentary Button (Save Image… / Copy / Export CSV…).
+        "XM.GlassPillToggle" , ToggleButton (Labels / Table); its "on" state tints accent.
+
+        A separate fill Border (with its own Opacity) sits behind the ContentPresenter so the
+        semi-transparent glass fill never dims the label text.
+    -->
+
+    <!--  ═══ Momentary pill ═══  -->
+    <Style x:Key="XM.GlassPillButton" TargetType="Button">
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Padding" Value="14,0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{DynamicResource XM.text2}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border x:Name="fill"
+                                CornerRadius="10"
+                                Background="{DynamicResource XM.bg}"
+                                Opacity="0.55"
+                                BorderBrush="{DynamicResource XM.hairline}"
+                                BorderThickness="0.5" />
+                        <ContentPresenter Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="fill" Property="Background" Value="{DynamicResource XM.hairlineS}" />
+                            <Setter TargetName="fill" Property="Opacity" Value="0.85" />
+                            <Setter TargetName="fill" Property="BorderBrush" Value="{DynamicResource XM.hairlineS}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="fill" Property="Opacity" Value="1.0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  ═══ Toggle pill ═══  -->
+    <Style x:Key="XM.GlassPillToggle" TargetType="ToggleButton">
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Padding" Value="14,0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{DynamicResource XM.text2}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <Border x:Name="fill"
+                                CornerRadius="10"
+                                Background="{DynamicResource XM.bg}"
+                                Opacity="0.55"
+                                BorderBrush="{DynamicResource XM.hairline}"
+                                BorderThickness="0.5" />
+                        <ContentPresenter Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="fill" Property="Background" Value="{DynamicResource XM.hairlineS}" />
+                            <Setter TargetName="fill" Property="Opacity" Value="0.85" />
+                            <Setter TargetName="fill" Property="BorderBrush" Value="{DynamicResource XM.hairlineS}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="fill" Property="Background" Value="{DynamicResource XM.accent}" />
+                            <Setter TargetName="fill" Property="Opacity" Value="0.30" />
+                            <Setter TargetName="fill" Property="BorderBrush" Value="{DynamicResource XM.accent}" />
+                            <Setter Property="Foreground" Value="{DynamicResource XM.text}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

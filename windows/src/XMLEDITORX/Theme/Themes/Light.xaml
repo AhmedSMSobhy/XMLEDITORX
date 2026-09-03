@@ -1,0 +1,35 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Light (id="light", isDark=false) -->
+
+    <!-- Surfaces -->
+    <SolidColorBrush x:Key="XM.bg"        Color="#FFF7F7F9" />
+    <SolidColorBrush x:Key="XM.bgDeep"    Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="XM.panel"     Color="#D1FAFAFC" />
+    <SolidColorBrush x:Key="XM.hairline"  Color="#1A000000" />
+    <SolidColorBrush x:Key="XM.hairlineS" Color="#33000000" />
+    <SolidColorBrush x:Key="XM.glassTop"  Color="#B3FFFFFF" />
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="XM.text"  Color="#FF1A1A1A" />
+    <SolidColorBrush x:Key="XM.text2" Color="#FF4D4D4D" />
+    <SolidColorBrush x:Key="XM.text3" Color="#FF808080" />
+
+    <!-- Syntax -->
+    <SolidColorBrush x:Key="XM.syntaxTag"   Color="#FF6F2DBD" />
+    <SolidColorBrush x:Key="XM.syntaxAttr"  Color="#FF0969DA" />
+    <SolidColorBrush x:Key="XM.syntaxVal"   Color="#FFA83E1C" />
+    <SolidColorBrush x:Key="XM.syntaxText"  Color="#FF1A7F37" />
+    <SolidColorBrush x:Key="XM.syntaxPunct" Color="#8C000000" />
+    <SolidColorBrush x:Key="XM.syntaxCom"   Color="#59000000" />
+
+    <!-- Accents / semantic -->
+    <SolidColorBrush x:Key="XM.accent"  Color="#FF0969DA" />
+    <SolidColorBrush x:Key="XM.accent2" Color="#FF6F2DBD" />
+    <SolidColorBrush x:Key="XM.ok"      Color="#FF1A7F37" />
+    <SolidColorBrush x:Key="XM.warn"    Color="#FFB08800" />
+    <SolidColorBrush x:Key="XM.err"     Color="#FFCF222E" />
+
+    <!-- Editor -->
+    <SolidColorBrush x:Key="XM.lineHighlight" Color="#8CB3D7FF" />
+</ResourceDictionary>

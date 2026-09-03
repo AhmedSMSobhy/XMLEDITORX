@@ -1,0 +1,22 @@
+# macOS build output
+macos/.build/
+macos/dist/
+
+# Windows build output
+bin/
+obj/
+publish/
+dist/
+dist_next/
+installer/Output/
+
+# IDE and user files
+.vs/
+.idea/
+*.user
+*.suo
+*.swp
+*.log
+
+# macOS noise
+.DS_Store
